@@ -4,6 +4,10 @@
   --font-primary: Inter;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
   font-size: 4px;
 }
@@ -83,10 +87,58 @@ header {
   margin-left: 3px;
 }
 
+/* Hero section */
+.hero {
+    padding: 0 12px;
+    margin-top: 174px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 0;
+}
+
+.title-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title-logo {
+    margin-left: 20px;
+    width: 103px;
+    height: 80px;
+}
+
 
 /* Responsive for large screens */
 @media (min-width: 992px) {
     .head {
         margin: 20px 32px 20px 32px;
+    }
+
+    .hero {
+        margin-top: 201px;
+    }
+
+    /* Change title display */
+    .title-container {
+        font-size: 60px;
+        /* background-color: red; */
+        align-items: center;
+        max-width: 911px;
+    }
+
+    .title-logo {
+        transform: rotate(-21.39deg);
+        order: 2;
+        margin-left: 28px;
+        margin-right: 45px;
+    }
+
+    .word-group:nth-child(1),
+    .word-group:nth-child(3) {
+        order: 1;
+    }
+
+    .word-group:nth-child(4) {
+        order: 3;
     }
 }
