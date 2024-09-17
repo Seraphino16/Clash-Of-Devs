@@ -1,71 +1,92 @@
 :root {
-    --primary-color: #F3F3F1;
-    --secondary-color: #262625;
-    --font-primary: Inter;
+  --primary-color: #f3f3f1;
+  --secondary-color: #262625;
+  --font-primary: Inter;
 }
 
 html {
-    font-size: 4px;
+  font-size: 4px;
 }
 
 body {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    font-family: var(--font-primary);
-    font-weight: 700;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: var(--font-primary);
+  font-weight: 700;
 }
 
 header {
-    margin: 40px 12px 0px 12px;
-    font-size: 3rem;
-    display: grid;
-    grid-template-columns: 120px auto 120px;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.progression-bar {
+    background-color: var(--secondary-color);
+    width: 32px;
+    height: 4px;
+}
+
+.head {
+  margin: 36px 12px 0px 12px;
+  font-size: 3rem;
+  display: grid;
+  grid-template-columns: 120px auto 120px;
+  align-items: center;
 }
 
 .container-piscine {
-    width: 91px;
-    height: 27px;
-    background-color: var(--secondary-color);
-    color: #EBEDFF;
-    border-radius: 80px;
-    /* padding: 6px 12px; */
-    transform: rotate(8deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 91px;
+  height: 27px;
+  background-color: var(--secondary-color);
+  color: #ebedff;
+  border-radius: 80px;
+  transform: rotate(8deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #percent {
-    justify-self: center;
-    align-self: center;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  justify-self: center;
+  align-self: center;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .switch-button {
-    background-color: var(--secondary-color);
-    width: 54px;
-    height: 27px;
-    border-radius: 63.07px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    justify-self: end;
+  background-color: var(--secondary-color);
+  width: 54px;
+  height: 27px;
+  border-radius: 63.07px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  justify-self: end;
 }
 
 .switch-circle {
-    background-color: var(--primary-color);
-    width: 23px;
-    height: 23px;
-    border-radius: 53.78px;
-    display: flex;
-    align-items: center;
-    margin-right: 4px;
+  background-color: var(--primary-color);
+  width: 23px;
+  height: 23px;
+  border-radius: 53.78px;
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
 }
 
 .switch-circle svg {
-    margin-left: 3px;
+  margin-left: 3px;
+}
+
+
+/* Responsive for large screens */
+@media (min-width: 992px) {
+    .head {
+        margin: 20px 32px 20px 32px;
+    }
 }
